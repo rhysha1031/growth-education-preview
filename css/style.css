@@ -1267,3 +1267,53 @@ p, li, .section-note, .hero-lead, .desc, .faq-a, .faq-q,
 .voice-quote, .voice-before, .voice-after, .state-list li, .note-line {
   text-wrap: pretty;
 }
+
+/* 持ち込める場所(対応範囲)・関わり方(2026-10-27) */
+.field-lead { margin: 0 auto 8px; }
+.field-group { margin-top: 44px; }
+.field-label {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  color: var(--color-accent);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 8px;
+  margin: 0 0 18px;
+}
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.field-grid .card { padding: 24px 24px; }
+.field-grid .card h3 { margin-bottom: 10px; }
+.field-grid .card p { line-height: 1.85; }
+.field-grid .card strong { color: var(--color-accent); font-weight: 600; }
+.mode-list {
+  list-style: none;
+  max-width: 820px;
+  margin: 40px auto 0;
+  padding: 0;
+}
+.mode-list li {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.5fr;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--color-border);
+  padding: 22px 4px;
+}
+.mode-list li:first-child { border-top: 1px solid var(--color-border); }
+.mode-state { font-size: 0.95rem; }
+.mode-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}
+.mode-do { font-size: 0.9rem; color: var(--color-text-soft); }
+@media (max-width: 640px) {
+  .mode-list li { grid-template-columns: 1fr; gap: 6px; }
+  .mode-name { order: -1; }
+}
